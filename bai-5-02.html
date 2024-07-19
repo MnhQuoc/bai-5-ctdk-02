@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích tam giác vuông</title>
+</head>
+<h1 style="color:brown;">Tính diện tích tam giác vuông</h1>
+<body>
+<br> Nhập độ dài cạnh kề 1 <input type="number" id="canhke1" placeholder="đơn vị cm" > </br>
+<br> Nhập độ dài cạnh kề 2 <input type="number" id="canhke2" placeholder="đơn vị cm" > </br>
+<br>
+<button style="width:130px; height:30px" onclick="tinhdientich()"> Tính diện tích </button>
+<p id="dientich"> Diện tích tam giác vuông: </p>
+
+</body>
+<script>
+    function tinhdientich() {
+        let canhke1 = +document.getElementById("canhke1").value
+        let canhke2 = +document.getElementById("canhke2").value
+        let dientich = canhke1*canhke2/2;
+        if (canhke1<=0 || canhke2<=0){
+            document.getElementById("dientich").innerHTML = "Cạnh bên của tam giác vuông thể nhỏ hơn hoặc bằng 0" ;
+        }
+        else {
+            document.getElementById("dientich").innerHTML = "Diện tích tam giác vuông có 2 cạnh bên là " +canhke1+ " và " +canhke2+  " là: " + dientich ;
+        }
+    }
+</script>
+</html>
